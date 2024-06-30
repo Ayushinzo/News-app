@@ -1,0 +1,3 @@
+Due to the CORS (Cross-Origin Resource Sharing) policy, Google does not allow the websites to access the resources locates outside the given domain. hence, we are not able to request the news API to fetch the news articles and to display in the browser. I have uploaded the some sample articles along with the website just to get a glance how does the website actually look.
+
+But Browser allows to send the request from Localhost to access the API. So first you will have to download the repository in your local computer and uncomment the fetch method which has the API and comment the another fetch which has a path of sample.json from all javascript files and done.

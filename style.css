@@ -1,0 +1,267 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+    transition: .2s linear;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+.header{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    left: 0; right: 0; top: 0;
+    padding: 1rem 3rem;
+    background-color: rgb(139, 138, 138);
+    z-index: 100;
+    opacity: .9;
+}
+.header > i{
+    display: none;
+}
+.header .heading h1{
+    font-size: 4rem;
+    color: red;
+}
+.header .heading a{
+    text-decoration: none;
+}
+.header .navBar a{
+    font-size: 1.8rem;
+    text-decoration: none;
+    margin: 0 1rem;
+    color: black;
+    padding: .5rem 1rem;
+}
+.header .navBar a:hover{
+    background-color: black;
+    color: white;
+}
+.header .search i, .menu{
+    font-size: 3rem;
+    cursor: pointer;
+    padding: .5rem;
+    border-radius: 10%;
+    border: .1rem solid black;
+}
+.searchInput{
+    position: absolute;
+    top: 120%;
+    right: 2%;
+    border: .3rem solid rgb(139, 138, 138);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+.searchInput.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.searchInput input[type="search"]{
+    width: 25rem;
+    padding: 1rem;
+    font-size: 1.7rem;
+    outline: none;
+}
+.searchInput input[type="submit"]{
+    font-size: 1.7rem;
+    padding: 1rem 1rem;
+    border-left: .3rem solid rgb(139, 138, 138);
+    background-color: rgb(139, 138, 138);
+    cursor: pointer;
+}
+.searchInput input[type="search"]::-webkit-search-cancel-button{
+    display: none;
+}
+.newsHeading{
+    margin-top: 10rem;
+    text-align: center;
+    font-size: large;
+}
+.container{
+    width: 100%;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.newsContainer{
+    width: 60%; height: 74vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    gap: 4rem;
+    overflow-y: scroll;
+}
+.newsContainer .card .cardImage img{
+    width: 100%;
+    height: 20rem;
+    /* object-fit: contain; */
+}
+.card{
+    /* width: 26rem; */
+    border: .1rem solid rgb(139, 138, 138); 
+}
+.newsContainer .card h2{
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    margin-top: .5rem;
+}
+.newsContainer .card span{
+    display: inline-block;
+    margin: .5rem 0 .5rem 1rem;
+    font-size: 1.2rem;
+}
+.newsContainer .card p{
+    margin: 0 1rem 1rem 1rem;
+    font-size: 1.3rem;
+}
+.newsContainer .card a{
+    display: inline-block;
+    margin: 0 0 1rem 1rem;
+    padding: .8rem 2rem;
+    text-decoration: none;
+    font-size: 1.4rem;
+    background-color: red;
+    color: white;
+}
+.newsContainer .card a:hover{
+    background-color: black;
+}
+.card p{
+    text-wrap: wrap;
+}
+.navBar.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+}
+.j_subcontainer .journalist{
+    border: .1rem solid rgb(139, 138, 138);
+    padding-bottom: 1rem;
+}
+.j_subcontainer .journalist .j_image img{
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    object-position: top;
+}
+.j_subcontainer .journalist h2{
+    margin: .5rem 1rem;
+    font-size: 2rem;
+}
+.j_subcontainer .journalist p{
+    font-size: 1.3rem;
+    margin: .5rem 1rem;
+    font-weight: bold;
+}
+.journalist .links{
+    /* position: absolute;
+    top: 2%; left: 2%;
+    display: flex;
+    flex-direction: column; */
+    margin-top: 1.5rem;
+}
+.journalist .links a{
+    font-size: 2rem;
+    background-color: rgb(110, 109, 109);
+    padding: .3rem .5rem;
+    text-decoration: none;
+    color: white;
+    transition: none;
+    margin-left: 1rem;
+}
+.journalist .links a:hover{
+    transform: scale(2);
+    background-color: red;
+    color: black;
+}
+.aboutCon{
+    padding: 1.5rem;
+    border: .2rem solid red;
+}
+.aboutCon p{
+    font-size: large;
+    line-height: 1.8;
+}
+.aboutCon div p span{
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1300px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 1000px){
+    .navBar{
+        position: absolute;
+        top: 100%; right: 15%; left: 15%;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        background-color: rgb(139, 138, 138);
+        opacity: 0.8;
+        padding: 1rem 2rem 2rem 2rem;
+    }
+    .header > i{
+        display: inline-block;
+    }
+    .header .navBar a{
+        display: block;
+        text-align: center;
+        background-color: rgb(68, 68, 68);
+        padding: 2rem 0;
+        margin: 1rem 0 0 0;
+        color: white;
+    }
+}
+
+@media (max-width: 870px){
+    .newsContainer{
+        width: 100%;
+    }
+    body{
+        padding: 0 3.5rem;
+    }
+    .navBar{
+        left: 0; right: 0;
+    }
+}
+
+@media (max-width: 535px){
+    html{
+        font-size: 50%;
+    }
+    body{
+        padding: 0 1.5rem;
+        padding-bottom: 2rem;
+    }
+    .header {
+        padding: 1rem 1rem; 
+    }
+    .newsContainer {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        gap: 1.5rem;
+    }
+    .newsContainer{
+        height: 80vh;
+    }
+    .searchInput input[type="search"]{
+        width: 30rem;
+    }
+    .aboutCon{
+        padding: 1.5rem;
+    }
+}
